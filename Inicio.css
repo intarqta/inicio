@@ -1,3 +1,4 @@
+
 .html, body, head {
     margin: 0px;
     padding: 0px;
@@ -184,15 +185,20 @@
     #contenedor-pestaña {
         margin-right: 0vh;
         margin-left: -7vh;
+    }    
+    #panel-uno {
+        margin-left: 5vh;
+        margin-top: -15vh;
+        display: block;
     }
-    #img-red-panel-1 {
-        max-height: 200px;
-    }
-    
     #titulo {
         margin-top: 3vh;
         color: white;
         font-size: 20px;
+    }
+    #img-red-panel-1 {
+        margin-top: 2vh;
+        margin-left: 10vh;
     }
     
 }
