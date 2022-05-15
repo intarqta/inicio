@@ -21,6 +21,14 @@
     display: flex;
     justify-content: space-between;
 }
+#div-boton-cerrar {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: end;
+}
 #img-logo {
     margin: 10px;
     background-color: black;
@@ -30,6 +38,14 @@
 
 #boton-menu-a {
     z-index: 3;
+    color: blueviolet;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    visibility: hidden;
+}
+#boton-menu-c {
+    z-index: 9;
     color: blueviolet;
     margin: 20px;
     width: 40px;
@@ -141,10 +157,11 @@
 #nav.active {
     color: black;
     background-color: white;
+    margin-left: -2vh;
 }
 #logo-nav {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     padding-bottom: 0px;
     margin: auto;
 }
@@ -239,7 +256,7 @@
             border-radius: 0px;
             margin-left: 1%;
             background-color: rgba(48, 50, 51, 0.531);
-            margin-top: 63.5vh;
+            margin-top: 64.5vh;
             justify-content: center;
             height: 12%;
         }
@@ -277,11 +294,15 @@
         }
         #contenedor-pestaña {
             visibility: hidden;
+            height: 200px;
+            width: 400px;
+            background-color: black;
+            margin-top: -60.1vh;
+            /* visibility: hidden; */
             width: auto;
         }
         #panel-uno {
             margin-left: 2vh;
-            margin-top: -48vh;
             display: block;
         }
         #Img-slider {
@@ -321,7 +342,7 @@
         }
         #boton-menu-a {
             visibility: visible;
-            margin-top: 3vh;
+            margin-top: 4vh;
             margin-right: 1vh;
 
         } 
@@ -334,12 +355,35 @@
             margin-top: 3%;
         }
         #ul-nav {
-            width:10px;
+            position: relative;
+            width: 25vh;
+            z-index: 9;
             display: block;
+            float: right;
+            margin: 0px;
+            padding: 0px;
+            margin-right: -8vh;
         }   
         #nav {
-            display: block;
+            display: flex;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 10px;  
+            margin-bottom: 2vh; 
+            height: 10vh;    
+            background-color: rgba(14, 14, 187, 0.803);  
         }   
+        /*clases activas de los elementos*/
+        #contenedor-pestaña.active{
+            visibility: visible;
+        }
+        #boton-menu-a.active {
+            visibility: hidden;
+        }
+        #boton-menu-c.active {
+            visibility: visible;
+        }
+        
 }
 /* Configuraciones para pantalla mayor a 1350 pixeles*/
 
@@ -349,3 +393,4 @@
     }
     
 } 
+
