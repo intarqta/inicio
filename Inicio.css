@@ -313,7 +313,7 @@
         #contenedor-titulo {
             width: 100%;
             border-radius: 0px;
-            margin-left: 1%;
+            margin-left: 0px;
             background-color: rgba(48, 50, 51, 0.531);
             margin-top: 63.5vh;
             justify-content: center;
