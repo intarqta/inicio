@@ -223,7 +223,7 @@
             height: 200px;
             width: 400px;
             background-color: rgba(0, 0, 0, 0.002);
-            margin-top: -43vh;
+            margin-top: -60.1vh;
             /* visibility: hidden; */
             width: auto;
         }
@@ -275,8 +275,8 @@
         }
         #boton-menu-a {
             visibility: visible;
-            margin-top: 5vh;
-            margin-right: 4vh;
+            margin-top: 6vh;
+            margin-right: 5vh;
     
         } 
         #titulo {
@@ -333,7 +333,7 @@
             height: 200px;
             width: 400px;
             background-color: black;
-            margin-top: -53vh;
+            margin-top: -60.1vh;
             /* visibility: hidden; */
             width: auto;
         }
@@ -359,6 +359,9 @@
             margin-bottom: 20px;
             width: 100%;
         }
+        #contenedor-panel{
+            margin-top: 20vh;
+        }
         #parrafo {
             margin: 0px;
             padding: 0px;
@@ -380,7 +383,6 @@
             visibility: visible;
             margin-top: 4vh;
             margin-right: 1vh;
-
         } 
         #titulo {
             font-size: 22px;
@@ -429,5 +431,6 @@
     }
     
 } 
+
 
 
