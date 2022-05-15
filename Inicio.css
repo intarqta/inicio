@@ -216,8 +216,8 @@
     
 }
 /* Cuando el ancho sea menor a 750px y el alto 600px como mínimo el menú cambia a modo movil*/
- @media (max-width: 750px) {
-    @media (min-height: 600px) {
+ @media (min-width: 480px) {
+    @media (max-width: 970px) {
         #contenedor-pestaña {
             visibility: hidden;
             width: auto;
@@ -229,28 +229,28 @@
         }
         #Img-slider {
             margin: 3vh;
-            width: 80vh;
+            width: 120%;
         } 
         #logo {
-            width: 80vh;
+            width: 120%;
         }
         #img-logo {
             margin: 20px;
         }
         #img-red-panel-1 {
             margin-top: 20px;
-            width: 80vh;
+            width: 120%;
         }
         #parrafo {
             margin: 0px;
             padding: 0px;
-            width: 80vh;
+            width: 120%;
         }
         .panel {
             padding: 0px;
         }
         #contenedor-titulo {
-            width: 80vh;
+            width: 120%;
             border-radius: 0px;
             margin-left: 3vh;
             background-color: rgba(48, 50, 51, 0.531);
@@ -262,6 +262,59 @@
             visibility: visible;
             margin-top: 5vh;
             margin-right: -2vh;
+
+        }          
+  }
+}
+@media (max-width: 550px) {
+    @media (min-height: 600px) {
+        #contenedor-pestaña {
+            visibility: hidden;
+            width: auto;
+        }
+        #panel-uno {
+            margin-left: 2vh;
+            margin-top: -25vh;
+            display: block;
+        }
+        #Img-slider {
+            margin: 4%;
+            width: 93%;
+        } 
+        #Img-slider img {
+            width: 100%;
+        }
+        #logo {
+            width: 100%;
+        }
+        #img-logo {
+            margin: 20px;
+        }
+        #img-red-panel-1 {
+            margin-top: 20px;
+            width: 90%;
+        }
+        #parrafo {
+            margin: 0px;
+            padding: 0px;
+            width: 105%;
+        }
+        .panel {
+            padding: 0px;
+        }
+        #contenedor-titulo {
+            width: 93%;
+            border-radius: 0px;
+            margin-left: 4%;
+            background-color: rgba(48, 50, 51, 0.531);
+            margin-top: 60vh;
+            justify-content: center;
+            height: 18%;
+        }
+        #boton-menu-a {
+            visibility: visible;
+            margin-top: 5vh;
+            margin-right: 4vh;
 
         }          
   }
