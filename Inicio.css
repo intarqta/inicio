@@ -285,8 +285,8 @@
             display: block;
         }
         #Img-slider {
-            margin: 1%;
-            width: 98%;
+            margin: 0px;
+            width: 100%;
         } 
         #Img-slider img {
             width: 100%;
@@ -311,7 +311,7 @@
             padding: 0px;
         }
         #contenedor-titulo {
-            width: 98%;
+            width: 100%;
             border-radius: 0px;
             margin-left: 1%;
             background-color: rgba(48, 50, 51, 0.531);
