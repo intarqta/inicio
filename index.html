@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="Inicio.css">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+         crossorigin="anonymous">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+        <!-- librería que permite cambiar los estados de los botones -->
+        <script src="https://code.jquery.com/jquery-git.js"></script>
+        <!-- Instalar el CDN de chart.js -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script> -->
+        
+        <!-- Añadir libreria query -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="contenedor-principal">
+        <div id="logo">
+            <a href="https://inta.gob.ar/reconquista">
+                <img id="img-logo"  src="./Imagenes/logo_inta.jpg" alt="">
+            </a>
+        </div>
+        <div id="contenedor-titulo-principal">
+            <div id="contenedor-titulo"><h1 id="titulo">Obsevatorio Territorial del Norte de Santa Fe</h1></div>
+        </div>
+        <div id="Img-slider">
+            <ul>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_1.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_2.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_3.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_4.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_5.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_6.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./Imagenes/Img-slider/IMG_7.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_8.jpg" alt="">
+                </li>
+                <li>
+                    <img  src="./Imagenes/Img-slider/IMG_9.jpg" alt="">
+                </li>
+                <li>
+                    <img id="IMG-principal" src="./Imagenes/Img-slider/IMG_10.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        
+        <div id="contenedor-pestaña">
+            <ul id="ul-nav">
+                <li id="nav" class="logo-nav">
+                    <img id="logo-nav" src="./Imagenes/logo-pluviometro.png" alt="">
+                    Red Plúviometrica</li>
+                <li id="nav" class="logo-nav">
+                    <img id="logo-nav" src="./Imagenes/logo-cartografia.jpg" alt="">
+                    Agricultura</li>
+                <li id="nav" class="logo-nav">
+                    <img id="logo-nav" src="./Imagenes/logo-cartografia.jpg" alt="">
+                    Ganaderia</li>
+                <li id="nav" class="logo-nav">
+                    <img id="logo-nav" src="./Imagenes/logo-cartografia.jpg" alt="">
+                    Cartografía
+                </li>
+                <li id="nav" class="logo-nav">
+                    <img id="logo-nav" src="./Imagenes/logo-cartografia.jpg" alt="">
+                    Medio Ambiente</li>
+
+            </ul>
+            <div id="contenedor-panel">
+                <div id="panel-uno" class="panel">
+                    
+                    <div>
+                        <h5>
+                        ¿Cómo funciona la red?<br> 
+                        <br>
+                        </h5>
+                       <p id="parrafo">La red la integran un conjunto de productores y personal de campo, que facilitan los datos a técnicos del INTA (un responsable por Agencia), mediante diferentes formas (WhatsApp, correo, mensaje, llamadas, etc).
+                        Los técnicos del INTA, cargan los datos de lluvia mediante una aplicación (ODK, recolector de datos mediante móvil). Desde el móvil el dato es enviado automáticamente a una planilla, que unifica los datos de lluvia de toda red. Así mismo, los registros contenidos en esta planilla principal pueden ser recogidos por páginas web, medios de comunicación en general o geoportales.</p>
+                    <a href="https://intarqta.github.io/redpluv/"><button id="boton-red" class="btn btn-success"> Ir a mapa de la Red</button></a>
+                </div>
+                    <img id="img-red-panel-1" src="./Imagenes/panel-img/red-funcionamiento.jpg" alt="Esquema ilustrativo del funcionamiento de la red pluviométrica">
+                </div>
+                <div class="panel">panel 2</div>
+                <div class="panel">panel 3</div>
+                <div class="panel ">
+                    panel 4
+                </div>
+                <div class="panel">panel 5</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Inicio.js"></script>    
+</body>
+</html>
