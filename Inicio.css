@@ -225,16 +225,18 @@
             margin: 20px;
             max-width: 400px;
         }
-        #parrafo {
-            margin-right: -22vh;
-        } 
-        
+        #logo {
+            width: 15%;
+        }
         #Img-slider {
             width: 150%;
             z-index: 1;
             margin: 0px;
             padding: 0px;
         } 
+        #contenedor-panel {
+            width: 140%;
+        }
          
         .html, body, head {
             background-color: red;
