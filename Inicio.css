@@ -114,7 +114,12 @@
     text-align: center;
     vertical-align: middle;
 }
+#boton-menu-a {
+    visibility: visible;
+    margin-top: 7vh;
+    margin-right: 6vh;
 
+} 
 #titulo {
     margin-top: 3vh;
     color: white;
@@ -215,6 +220,11 @@
         }
         #contenedor-pestaña {
             visibility: hidden;
+            height: 200px;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.002);
+            margin-top: -60.1vh;
+            /* visibility: hidden; */
             width: auto;
         }
         #panel-uno {
@@ -240,11 +250,14 @@
             margin-bottom: 20px;
             margin-left: 1%;
         }
+        #contenedor-panel{
+            margin-top: 40vh;
+        }
         #parrafo {
-            margin: 0px;
+            
             padding: 0px;
             width: 100%;
-            margin-left: 1%;
+            margin-left: 0px;
             margin-bottom: 3%;
 
         }
@@ -268,19 +281,42 @@
         } 
         #titulo {
             font-size: 22px;
-        }
+        } 
+        
         /* configuraciones de nav y ul nav para evitar  que afecten la 
         visualización en moviles */
         #boton-red {
-            margin-left: 1%;
+            margin-top: 3%;
         }
         #ul-nav {
-            width:10px;
+            position: relative;
+            width: 25vh;
+            z-index: 9;
             display: block;
+            float: right;
+            margin: 0px;
+            padding: 0px;
+            margin-right: -6.6vh;
         }   
         #nav {
-            display: block;
-        } 
+            display: flex;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 10px;  
+            margin-bottom: 2vh; 
+            height: 10vh;    
+            background-color: rgba(14, 14, 187, 0.803);  
+        }
+        /*clases activas de los elementos*/
+        #contenedor-pestaña.active{
+            visibility: visible;
+        }
+        #boton-menu-a.active {
+            visibility: hidden;
+        }
+        #boton-menu-c.active {
+            visibility: visible;
+        }
         
     }
     
@@ -393,4 +429,5 @@
     }
     
 } 
+
 
