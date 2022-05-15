@@ -223,7 +223,7 @@
             height: 200px;
             width: 400px;
             background-color: rgba(0, 0, 0, 0.002);
-            margin-top: -60.1vh;
+            margin-top: -43vh;
             /* visibility: hidden; */
             width: auto;
         }
@@ -275,8 +275,8 @@
         }
         #boton-menu-a {
             visibility: visible;
-            margin-top: 7vh;
-            margin-right: 6vh;
+            margin-top: 5vh;
+            margin-right: 4vh;
     
         } 
         #titulo {
@@ -333,7 +333,7 @@
             height: 200px;
             width: 400px;
             background-color: black;
-            margin-top: -60.1vh;
+            margin-top: -53vh;
             /* visibility: hidden; */
             width: auto;
         }
@@ -357,12 +357,12 @@
         #img-red-panel-1 {
             margin-top: 20px;
             margin-bottom: 20px;
-            width: 110%;
+            width: 100%;
         }
         #parrafo {
             margin: 0px;
             padding: 0px;
-            width: 110%;
+            width: 100%;
         }
         .panel {
             padding: 0px;
