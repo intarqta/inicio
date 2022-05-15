@@ -373,8 +373,6 @@
         #contenedor-titulo {
             width: 98%;
             border-radius: 0px;
-            margin-left: 20px;
-            margin-right: 20px;
             background-color: rgba(48, 50, 51, 0.531);
             margin-top: 63.1vh;
             justify-content: center;
@@ -387,6 +385,8 @@
         } 
         #titulo {
             font-size: 22px;
+            margin-left: 20px;
+            margin-right: 20px;
         }
         /* configuraciones de nav y ul nav para evitar  que afecten la 
         visualización en moviles */
