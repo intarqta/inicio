@@ -271,7 +271,6 @@
 }
 /* Cuando el ancho sea menor a 750px y el alto 600px como mínimo el menú cambia a modo movil*/
 @media (max-width: 550px) {
-    @media (min-height: 600px) {
         .html, body {
             max-width: 100%;
             /* overflow: hidden; */
@@ -340,8 +339,7 @@
         }   
         #nav {
             display: block;
-        }      
-  }
+        }   
 }
 /* Configuraciones para pantalla mayor a 1350 pixeles*/
 
