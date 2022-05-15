@@ -357,7 +357,7 @@
         #img-red-panel-1 {
             margin-top: 20px;
             margin-bottom: 20px;
-            width: 100%;
+            width: 98%;
         }
         #contenedor-panel{
             margin-top: 30vh;
@@ -365,7 +365,7 @@
         #parrafo {
             margin: 0px;
             padding: 0px;
-            width: 100%;
+            width: 98%;
         }
         .panel {
             padding: 0px;
@@ -373,7 +373,8 @@
         #contenedor-titulo {
             width: 100%;
             border-radius: 0px;
-            margin-left: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
             background-color: rgba(48, 50, 51, 0.531);
             margin-top: 63.1vh;
             justify-content: center;
