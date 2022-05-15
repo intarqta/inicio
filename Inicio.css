@@ -227,16 +227,16 @@
             max-width: 400px;
         }
         #logo {
-            width: 150%;
+            width: 130%;
         }
         #Img-slider {
-            width: 150%;
+            width: 130%;
             z-index: 1;
             margin: 0px;
             padding: 0px;
         } 
         #contenedor-panel {
-            width: 140%;
+            width: 125%;
         }
          
         .html, body, head {
