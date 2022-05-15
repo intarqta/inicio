@@ -260,7 +260,7 @@
 }
 /* Configuraciones para pantalla mayor a 1350 pixeles*/
 
-@media (max-width: 1350px) {
+@media (min-width: 1350px) {
     #contenedor-pestaña {
         margin-top: -8.8vh;
     }
