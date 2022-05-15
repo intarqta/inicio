@@ -16,3 +16,21 @@ logonav.forEach((cadanav, i)=>{
     })
 
 })
+
+// En modo celular al hacer click ene l boton del menú se despliega el menu
+
+const botonMenu = document.getElementById('boton-menu-a');
+const botonCerrarMenu = document.getElementById('boton-menu-c');
+const pestLateral = document.getElementById('contenedor-pestaña');
+
+botonMenu.addEventListener('click', function(){
+    pestLateral.classList.add('active');
+    botonMenu.classList.add('active');
+    botonCerrarMenu.classList.add('active');
+    
+})
+botonCerrarMenu.addEventListener('click', function(){
+    pestLateral.classList.remove('active');
+    botonMenu.classList.remove('active');
+    botonCerrarMenu.classList.remove('active');
+})
