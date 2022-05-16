@@ -1,18 +1,22 @@
 
 const logonav = document.querySelectorAll('.logo-nav');
 const panel = document.querySelectorAll('.panel');
-
+const tLogo = document.querySelectorAll('#logo-nav-img');
 //cuando se hace click en un nav 
 logonav.forEach((cadanav, i)=>{
     logonav[0].classList.add('active');
     panel[0].classList.add('active');
+    tLogo[0].classList.add('active');
     logonav[i].addEventListener('click', () =>{
         logonav.forEach((cadanav, i) =>{
             logonav[i].classList.remove('active');
             panel[i].classList.remove('active');
+            tLogo[i].classList.remove('active');
         })
         logonav[i].classList.add('active');
         panel[i].classList.add('active');
+        tLogo[i].classList.add('active');
+        
     })
 
 })
@@ -22,6 +26,7 @@ logonav.forEach((cadanav, i)=>{
 const botonMenu = document.getElementById('boton-menu-a');
 const botonCerrarMenu = document.getElementById('boton-menu-c');
 const pestLateral = document.getElementById('contenedor-pestaña');
+
 
 botonMenu.addEventListener('click', function(){
     pestLateral.classList.add('active');
