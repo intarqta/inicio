@@ -57,6 +57,9 @@ function tabla(datos1){
     const datosVera = datos1.values.filter(data =>{
         return data[1] ==='Vera';
     })
+    const datos9jlio = datos1.values.filter(data =>{
+      return data[1] ==='9 de Julio';
+  })
 /*Carga de gráficas y link de descarga dentro del popup Datos*/     
 const canvas = document.getElementById('gra-panel-gan');
 const canvas2 = document.getElementById('gra-panel-gan2');
