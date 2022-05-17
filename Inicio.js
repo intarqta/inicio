@@ -60,9 +60,10 @@ function tabla(datos1){
 /*Carga de gráficas y link de descarga dentro del popup Datos*/     
 const canvas = document.getElementById('gra-panel-gan');
 const canvas2 = document.getElementById('gra-panel-gan2');
+const canvas3 = document.getElementById('gra-panel-gan3');
 const ctx = canvas.getContext('2d');
 const ctx2 = canvas2.getContext('2d');
-
+const ctx3 = canvas3.getContext('2d');
 
 const configChart = {
   type: 'horizontalBar',
@@ -140,8 +141,48 @@ const configChart = {
     } 
   
    }
+   const configChart3 = {
+      type: 'line',
+      data: {
+         labels: datos9jlio.map(data =>{return data[0]}),
+         datasets: [{
+            label: 'Novillos ',
+            data: datos9jlio.map(data =>{return data[4]}),
+            borderColor:"rgba(236, 35, 35, 0.75)",
+            backgroundColor: 'rgba(236, 35, 35,0)'
+         },
+         {
+            label: 'Vacas ',
+            data: datos9jlio.map(data =>{return data[2]}),
+            borderColor:'rgba(35, 102, 236,0.75)',
+            backgroundColor: 'rgba(35, 102, 236,0)'
+         },
+         {
+            label: 'Toros ',
+            data: datos9jlio.map(data =>{return data[8]}),
+            borderColor:'rgba(35, 129, 20,1)',
+            backgroundColor: 'rgba(35, 129, 20,0)'
+         },
+         {
+            label: 'Vaquillonas ',
+            data: datos9jlio.map(data =>{return data[3]}),
+            borderColor:'rgba(81, 26, 132, 1)',
+            backgroundColor: 'rgba(81, 26, 132, 0)'
+         },
+         {
+            label: 'Novillitos ',
+            data: datos9jlio.map(data =>{return data[5]}),
+            borderColor:'rgba(58, 2, 25, 0.944)',
+            backgroundColor: 'rgba(58, 2, 25, 0)'
+         }  
+        ]
+      } 
+    
+     }
  // añadir el gráfico y asignarle la clase active 
  myChart =  new Chart(ctx, configChart);
  // añadir el gráfico y asignarle la clase active 
  myChart2 =  new Chart(ctx2, configChart2);
+ // añadir el gráfico y asignarle la clase active 
+ myChart3 =  new Chart(ctx3, configChart3);
 }
