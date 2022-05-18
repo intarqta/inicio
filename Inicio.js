@@ -39,6 +39,98 @@ botonCerrarMenu.addEventListener('click', function(){
     botonMenu.classList.remove('active');
     botonCerrarMenu.classList.remove('active');
 })
+//========================================================================////
+//========= Gráficas mediante Chart.js para el sector Agricola ============//
+//===========================================================================// 
+let cotizSoja = document.getElementById('gra-panel-agr').getContext("2d");
+fetch('https://sheets.googleapis.com/v4/spreadsheets/16PrvOkWhbnlHSx-QnHfQaD4OchL1LyrtBfkttN62nTs/values/SOJA!A4:M27?key=AIzaSyB6SS-ZbzmC9wPxsPm-z_CGBIrcQoD8nr4')
+    .then(resagri => resagri.json())
+    .then(datAgri => {
+       
+        tablaAgri(datAgri)
+    })
+    function tablaAgri(datAgri){
+      const año2001 = datAgri.values.filter(data =>{
+          return data[0] ==="2001";
+      })[0].map(function(i){
+         let string = i.toString().replace(/[$.]/g,'');
+       return parseFloat(string)});
+         //Eliminar el primer elemento del array   
+     año2001.shift();
+     const año2002 = datAgri.values.filter(data =>{
+      return data[0] ==="2002";
+      })[0].map(function(i){
+     let string = i.toString().replace(/[$.]/g,'');
+     return parseFloat(string)});
+     año2002.shift();
+     const año2003 = datAgri.values.filter(data =>{
+      return data[0] ==="2003";
+      })[0].map(function(i){
+     let string = i.toString().replace(/[$.]/g,'');
+     return parseFloat(string)});
+     año2003.shift();
+     const año2004 = datAgri.values.filter(data =>{
+      return data[0] ==="2004";
+      })[0].map(function(i){
+     let string = i.toString().replace(/[$.]/g,'');
+     return parseFloat(string)});
+     año2004.shift();
+     const año2005 = datAgri.values.filter(data =>{
+      return data[0] ==="2005";
+      })[0].map(function(i){
+     let string = i.toString().replace(/[$.]/g,'');
+     return parseFloat(string)});
+     año2005.shift();
+ 
+     const meses = ['Ene', 'Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+      
+      const configChart = {
+         type: 'line',
+         data: {
+            labels: meses,
+            datasets: [{
+               label: '2001 ',
+               data: año2001,
+               borderColor:"rgba(236, 35, 35, 0.75)",
+               backgroundColor: 'rgba(236, 35, 35,0)'
+            },
+            {
+               label: '2002 ',
+               data: año2002,
+               borderColor:"rgba(236, 35, 35, 0.75)",
+               backgroundColor: 'rgba(236, 35, 35,0)'
+            },
+            {
+               label: '2003 ',
+               data: año2003,
+               borderColor:"rgba(236, 35, 35, 0.75)",
+               backgroundColor: 'rgba(236, 35, 35,0)'
+            },
+            {
+               label: '2004 ',
+               data: año2004,
+               borderColor:"rgba(236, 35, 35, 0.75)",
+               backgroundColor: 'rgba(236, 35, 35,0)'
+            },
+            {
+               label: '2005 ',
+               data: año2005,
+               borderColor:"rgba(236, 35, 35, 0.75)",
+               backgroundColor: 'rgba(236, 35, 35,0)'
+            }
+           ]
+         } 
+        }
+    // añadir el gráfico y asignarle la clase active 
+    myChart =  new Chart(cotizSoja, configChart);
+
+
+   }
+
+
+//========================================================================////
+//========= Gráficas mediante Chart.js para el sector ganadero ============//
+//===========================================================================//
 
 // Gráficas mediante Chart.js
 let graStockGanadero = document.getElementById('gra-panel-gan').getContext("2d");
