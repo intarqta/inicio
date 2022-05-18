@@ -161,6 +161,7 @@
     color: black;
     background-color: white;
     margin-left: -2vh;
+    transition: .3s ease-in-out all;
 }
 
 #logo-nav-img {
