@@ -16,7 +16,7 @@ $(document).ready(function(){
     var altura = $('#footer').offset().top;
   
     $(window).on('scroll',function(){
-        if($(window).scrollTop() <1000){ 
+        if($(window).scrollTop() <600){ 
             $('footer').addClass('active');
             $('links').addClass('active');
             $('Copyright').addClass('active');            
