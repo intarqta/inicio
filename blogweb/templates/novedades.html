@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for l in lista %}
+    <div id="block">
+        {% for x in lista %}
+        <div id="fila"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil consectetur odio iste quam architecto eius quod, dolor magni, quasi ipsa debitis ipsam totam! Adipisci nam eius odio quae mollitia, eveniet nesciunt est tempore iusto blanditiis. Dolorem, voluptatibus! Quia dignissimos explicabo pariatur illo libero nesciunt unde quos numquam tempora magnam.</p></div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <style>
+        html, body{
+            width: 100%;
+            height: fit-content;
+            scroll-behavior: auto;
+        }
+        #block{
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            align-content: space-evenly;
+        }
+        #fila{
+            width: 33%;
+            height: fit-content;
+            margin: 1rem;
+            text-align: justify;
+            border-radius: 0.5rem;
+            padding: 0.25rem;
+        }
+        #fila:hover{
+            background-color: rgb(227, 226, 226);
+            cursor: pointer;
+            transition: all 0.5s ease;
+            border: solid 0.15px rgb(122, 122, 122);
+        }
+        H1{
+            text-align: center;
+            /* background-color: aqua; */
+            margin-top: 1rem;
+        }
+    </style>
+    
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,569 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Importar imagenes -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB INTA</title>
+    <!-- estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Agregamos el CDN JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+</head>
+
+<body>
+              <!-- CREAR UN SLIDER PARA PRESENTAR LOS PRINCIPALES ACTIVIDADES -->
+              <div id="carouselExampleDark"  class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="4000">
+                    <img id="img-slider" src="{% static 'inov-int-agro.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'inovacao-no-agronegocio.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img id="img-slider" src="{% static 'telefono.png' %}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Red de pluviómetros de Santa Fe</h5>
+                      <p>Datos de registros pluviómetricos en diferentes establecimientos de la provincia.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img id="img-slider" src="{% static 'IMG_BAJOS.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Zonas de riesgo</h5>
+                      <p>Mapa actualizado de las principales zonas de riesgo de inundaciones de Santa Fe.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!--  Catalogo Principal---------------------------------------------------------------------------------- -->
+            <main id="container-principal" role="main" style="width: 100%;">
+              <div class="album py-5 bg-light" >
+                <div class="container" style="margin: auto;padding: 0.25rem;width: 100%;">
+                  <div class="row">
+                    <!-- primer contenedor Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Segundo Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Tercer Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Cuarto Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Quinto Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Sexto Contenedor --------------------------------- -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm" style="min-height: 15rem;">
+                          <svg style="background-color: #0082ca;"
+                            class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail"
+                          >
+                            <title >Placeholder</title>
+                            <img src="{% static 'fondo.png' %}" alt="" style="height: 225px;width: 100%;">
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em" style="font-weight: 800;margin: auto;">
+                              Mapa de Cultivos
+                            </text>
+                          </svg>
+                          <div class="card-body">
+                            <p class="card-text" style="max-height: 5rem;overflow-y: scroll;">
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                            El relevamiento sistemático de la cobertuta de suelos de la provincia de Santa Fe. Está información se actualiza cada 6 meses.
+                           
+                        </p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                  
+                                >
+                                  <a href="https://geo-crsantafe.inta.gob.ar/datasets/geonode:suelos_santa_fe/embed" style="font-weight: 800;text-decoration: none;">Ver</a>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-outline-secondary"
+                                >
+                                  Edit
+                                </button>
+                              </div>
+                              <small class="text-muted">9 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+    <style>
+        /* añadir imagen de fondo en el html */
+        html, body{
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+
+        }
+           
+        #contenedor-principal{
+            scroll-behavior: auto;
+        }
+
+        
+        .container-fluid{
+            background-color: rgb(254, 253, 253);
+        }
+        .container-fluid.active{
+            position: fixed;
+            z-index: 99;
+            top: 0px;
+            padding: 1rem;
+            transition: all 0.5s ease;
+            box-shadow: 0px 5px 3px rgba(173, 173, 173, 0.813);
+        }
+        /* configuración del logo principal */
+        #logo-inta{
+
+            width: 3rem;
+            padding: 0px;
+            margin-right: 1rem;
+            
+        }
+        #titulo-logo{
+            text-align: center;
+            line-height: 1.35rem;
+        }
+        div ul a:hover{
+            background-color: brown;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            transition: 0.5s ease;
+            color: azure;
+            margin-right: 0.25rem;
+            margin-left: 0.25rem;
+            margin-bottom: 0.25rem;
+        } 
+        footer {
+        position:relative;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        background:#999;
+        transition: all 0.5s ease;
+        }
+        /* #img-slider{
+          object-fit: cover;
+        } */
+       
+    </style>
+</body>
+</html>
+{% endblock %}
