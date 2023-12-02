@@ -142,7 +142,7 @@ fetchData('../static/Json/red.json')
   function addContentToSidebar(marker) {
     const { id, Lugar, coords } = marker;
     const smallInfo = Lugar !== undefined ? `<small>${Lugar}</small>` : "";
-    fetch('https://sheets.googleapis.com/v4/spreadsheets/1awrrt2lEPwK-Y16boJWzRtW1INCDPqBpax6DsUAR26A/values/Hoja 1!A:D?key=AIzaSyBqSKs7DT9oDteBtU5-tgs5t3nxfciLFz0')
+    fetch('https://sheets.googleapis.com/v4/spreadsheets/1awrrt2lEPwK-Y16boJWzRtW1INCDPqBpax6DsUAR26A/values/Hoja 1!C:F?key=AIzaSyBqSKs7DT9oDteBtU5-tgs5t3nxfciLFz0')
     .then(res => res.json())
     .then(datos => {
         tabla(datos.values)
@@ -379,7 +379,7 @@ function populate(slct1, slct2) {
   s2.innerHTML = "";
   optionArray = [];
   // Extraer los datos de la base de datos
-  fetch('https://sheets.googleapis.com/v4/spreadsheets/1awrrt2lEPwK-Y16boJWzRtW1INCDPqBpax6DsUAR26A/values/Hoja 1!A:D?key=AIzaSyBqSKs7DT9oDteBtU5-tgs5t3nxfciLFz0')
+  fetch('https://sheets.googleapis.com/v4/spreadsheets/1awrrt2lEPwK-Y16boJWzRtW1INCDPqBpax6DsUAR26A/values/Hoja 1!C:F?key=AIzaSyBqSKs7DT9oDteBtU5-tgs5t3nxfciLFz0')
     .then(res => res.json())
     .then(datos => {
         tabla(datos.values)
