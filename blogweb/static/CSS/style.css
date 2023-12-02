@@ -95,7 +95,8 @@ svg:not(:root) {
 .footer {
   position: absolute;
   border-top: 0.5px solid #e3e3e3c0;
-  background-image: url(../static/IMG/imagen-footer-red.jpg);
+  background-image: url(../imagen-footer-red.jpg);
+
   /* background: linear-gradient(rgb(255, 255, 255),rgb(173, 220, 249), rgb(130, 197, 223), rgb(121, 192, 250)); */
   background-size: cover;
   background-color: #70d1ef;
