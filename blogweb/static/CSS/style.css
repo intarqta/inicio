@@ -33,7 +33,7 @@ svg:not(:root) {
 /*========================================= Panel de filtro de datos ======================*/
 /* Configuración del boton de filtros de datos */
 #botonFiltroDatosAbrir {
-  position: absolute;
+  position: relative;
   width: 40px;
   height: 40px;
   z-index: 999999;
@@ -67,6 +67,7 @@ svg:not(:root) {
 #botonFiltroDatosAbrir.active {
   visibility: hidden;
 }
+
 /* Configuración del panel de filtro de datos */
 #divContentFiltroDatos {
   display: flex;
