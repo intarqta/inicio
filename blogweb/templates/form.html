@@ -31,7 +31,7 @@
 </head>
 <body>
     <div id="content-form">
-     <form id="form-contact" action="http://127.0.0.1:8000/postform/" class="needs-validation" method="post">
+     <form id="form-contact" action="{% url 'okform' %}" class="needs-validation" method="post">
         {% csrf_token %}
         <div class="form-row">
           <div class="col-md-4 mb-3">
