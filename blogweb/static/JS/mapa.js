@@ -17,7 +17,7 @@ let config = {
   const lng = -28.83;
 
 
-var map = L.map('map').setView([-29.3,-60.5],8);
+var map = L.map('map').setView([-31.253113, -61.447819],8);
 
 L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
         maxZoom: 18,
@@ -122,7 +122,7 @@ fetchData('../static/Json/red.json')
     
     // close sidebar when click on close button
     closeSidebar();
-    map.setView([-29.25 ,-60.45], 8);
+    map.setView([-31.253113, -61.447819], 8);
   });
   
   
