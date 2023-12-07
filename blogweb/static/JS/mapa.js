@@ -19,9 +19,11 @@ let config = {
 
 var map = L.map('map').setView([-29.3,-60.5],8);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains:['mt0','mt1','mt2','mt3']
+}).addTo(map);;
 
 // ------------------------------------------------------------
 // async function to get data from json
