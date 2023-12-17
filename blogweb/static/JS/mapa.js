@@ -23,7 +23,7 @@ L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
         maxZoom: 18,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains:['mt0','mt1','mt2','mt3']
-}).addTo(map);;
+}).addTo(map);
 
 // ------------------------------------------------------------
 // async function to get data from json
@@ -65,11 +65,11 @@ fetchData('../static/Json/red.json')
         latlngs.push(marker.properties.coords);
       
     });
-    L.geoJson(Departamentos,{
-        fillOpacity:0,
-        color:'#00ace9',
-        weight: 3,
-      }).addTo(map);  
+    // L.geoJson(Departamentos,{
+    //     fillOpacity:0,
+    //     color:'#00ace9',
+    //     weight: 3,
+    //   }).addTo(map);  
     return data;
   }).then((data)=>{
     featureGroups.map((marker) => {
