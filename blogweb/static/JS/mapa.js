@@ -24,6 +24,13 @@ L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(map);
+// Utilizar el servicio wms de IGN de los departamentos
+L.tileLayer.wms('https://wms.ign.gob.ar/geoserver/wms?',{
+  layers:'ign:departamento',
+  format:'image/png',
+  transparent:true,
+  CQL_FILTER: "fdc='Servicio de Catastro e Información Territorial'" // Aplicar filtro
+}).addTo(map);
 
 // ------------------------------------------------------------
 // async function to get data from json
