@@ -1,0 +1,8 @@
+region;recurso;calibrado_en;pendiente;ordenada;funcion
+Pampa Mesopotamica;alfalfa;Pampa Deprimida;;;alfalfa_pampaDepri
+Pampa Mesopotamica;Pastizal;Pampa Mesopotamica;;;campoNatural_pampaMesop
+Pampa Deprimida;alfalfa;Pampa Deprimida;;;alfalfa_pampaDepri
+Nandubayzal y Selva de Montiel;Pastizal;Nandubayzal y Selva de Montiel;;;campoNatural_nea
+Pajonales y Palmares de Yatay;Pastizal;Pajonales y Palmares de Yatay;;;campoNatural_nea
+Malezales;Pastizal;Malezales;;;campoNatural_nea
+Esteros del Ibera;Pastizal;Esteros del Ibera;;;campoNatural_nea

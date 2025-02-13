@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Frontend de la aplicación de fontagro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La aplicación de consta de un backend desarrollado en 
 
 ## Available Scripts
 
