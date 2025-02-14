@@ -10,7 +10,9 @@ import { format, subMonths } from 'date-fns';
 import { es } from 'date-fns/locale';
 import 'chartjs-adapter-date-fns';
 import ResourceSelector from './ResourceSelector';
-import CalcPPNA from './CalcPPNA';
+import useCalcPPNA from './CalcPPNA';
+import useDryMatterProductivity from './DataHist';
+import MergedProductivityChart from './MergeChart';
 import { Chart, CategoryScale, LinearScale, LineElement, PointElement, TimeScale, Tooltip, Legend, Title, Filler } from 'chart.js';
 import { createMergedTable, aggregateDataWithExtras } from './dataUtils';
 
@@ -36,6 +38,11 @@ const Mapa = () => {
   const [showChart, setShowChart] = useState(true);
   const [startDate, setStartDate] = useState(format(subMonths(new Date(), 6), 'yyyy-MM-dd'));
   const [endDate, setEndDate] = useState(format(new Date(), 'yyyy-MM-dd'));
+  // Declaración del estado para las quincenas
+  const [selectedQuincenas, setSelectedQuincenas] = useState([]);
+  const [aggregatedHistorical, setAggregatedHistorical] = useState([]);
+  const [aggregatedActual, setAggregatedActual] = useState([]);
+  
 
   const chartRef = useRef(null);
 
@@ -52,9 +59,11 @@ const Mapa = () => {
     };
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/ndvi/', {
+      const response = await fetch('https://apigee-4ud9.onrender.com/api/ndvi/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json'
+      },
         body: JSON.stringify(payload),
       });
       if (!response.ok) {
@@ -71,14 +80,16 @@ const Mapa = () => {
       setLoading(false);
     }
   }, [startDate, endDate]);
+  //=============================== Permite obtener un array con las quinsenas selccionadas por el usuario
 
-  // Actualizar consulta si ya se dibujó un polígono y se cambian las fechas
-  useEffect(() => {
-    if (positions.length > 0) {
-      sendCoordinates(positions);
-    }
-  }, [startDate, endDate, positions, sendCoordinates]);
-
+    // Extraer las quincenas únicas desde aggregatedData
+    useEffect(() => {
+      if (aggregatedTable && aggregatedTable.length > 0) {
+        const todasLasQuincenas = aggregatedTable.map(item => item.quincena);
+        setSelectedQuincenas(todasLasQuincenas);
+      }
+    }, [aggregatedTable]);
+  //====================================================================================================
   // Manejo de la creación del polígono
   const handleDrawCreate = useCallback((event) => {
     const { layer } = event;
@@ -240,7 +251,7 @@ const Mapa = () => {
     boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
   };
 
-  // =============================================================
+  // ============================== Calculo de PPNA del rango de fecha definido por el usuario =================================== //
 
   useEffect(() => {
     if (data && Object.keys(data).length > 0) {
@@ -253,6 +264,40 @@ const Mapa = () => {
       setAggregatedTable(aggTable);
     }
   }, [data, dominantRegion, selectedResource]);
+
+
+      // Llamas al hook para obtener el array de datos procesados
+  const datasetsPPNAactual = useCalcPPNA({ 
+    aggregatedData: aggregatedTable,
+    selectedResource,
+    dominantRegion 
+  });
+
+  // Actualizas el estado cuando datasetsPPNAactual cambie
+  useEffect(() => {
+    if (datasetsPPNAactual?.length > 0) {
+      setAggregatedActual(datasetsPPNAactual);
+    }
+  }, [datasetsPPNAactual]);
+
+  // =============   Calculo de PPNA hitorico para el mismo rango de fecha definido por el usuario =================================== //
+  // Llamas al hook para obtener el dataset
+  const datasets = useDryMatterProductivity({ 
+    csvUrl: '/ndviRegional_1.csv', 
+    quincenas: selectedQuincenas, 
+    recurso: selectedResource, 
+    region: dominantRegion
+  });
+
+  // Actualizas el estado cuando 'datasets' cambia
+  useEffect(() => {
+    if (datasets.length > 0) {
+      setAggregatedHistorical(datasets);
+    }
+  }, [datasets]);
+
+  console.log("Datos historico de PPNA", aggregatedHistorical)
+//================================================== Fin de calculo de PPNA Historico ========================================
 
   // Condición para mostrar el gráfico de NDVI, temperatura y radiación
   const shouldShowChart = hasChartData && aggregatedTable && aggregatedTable.length > 0;
@@ -370,61 +415,66 @@ const Mapa = () => {
             </FeatureGroup>
           </MapContainer>
         </div>
-        {shouldShowChart && (
-          <>
-            {!showChart && (
-              <button
-                onClick={() => setShowChart(true)}
-                style={{
-                  position: 'absolute',
-                  bottom: '20px',
-                  right: '20px',
-                  zIndex: 1000,
-                  backgroundColor: '#007bff',
-                  color: '#fff',
-                  border: 'none',
-                  borderRadius: '3px',
-                  padding: '10px 15px',
-                  cursor: 'pointer'
-                }}
-              >
-                Expandir gráfico
-              </button>
-            )}
-            {showChart && (
-              <div style={{
-                height: '60%',
-                transition: 'height 0.3s',
-                backgroundColor: '#fff',
-                padding: '10px',
-                position: 'relative',
-                marginBottom: '20px'
-              }}>
-                <button
-                  onClick={() => setShowChart(false)}
-                  style={{
-                    position: 'absolute',
-                    top: '5px',
-                    right: '5px',
-                    zIndex: 1000,
-                    backgroundColor: '#007bff',
-                    color: '#fff',
-                    border: 'none',
-                    borderRadius: '3px',
-                    padding: '5px 10px',
-                    cursor: 'pointer'
-                  }}
-                >
-                  Contraer gráfico
-                </button>
-                <CalcPPNA
-                  aggregatedData={aggregatedTable}
-                  selectedResource={selectedResource}
-                  dominantRegion={dominantRegion}
-                />
-              </div>
-            )}
-          </>
+        {/* Botón de expandir el gráfico, posicionado sobre el mapa en la esquina inferior derecha cuando está contraído */}
+        {(!showChart && selectedResource) && (
+          <div style={{ pointerEvents: 'none' }}>
+            <button
+              onClick={() => setShowChart(true)}
+              style={{
+                position: 'absolute',
+                bottom: '20px',
+                right: '20px',
+                zIndex: 1000, // z-index bajo para no bloquear el mapa
+                pointerEvents: 'auto', // el botón captura el click
+                backgroundColor: '#007bff',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '3px',
+                padding: '10px 15px',
+                cursor: 'pointer'
+              }}
+            >
+              Expandir gráfico
+            </button>
+          </div>
+        )}
+       {/* Contenedor del gráfico PPNA: ocupa 60% de la altura cuando se muestra */}
+        {showChart && selectedResource && (
+        <div
+            style={{
+            height: '60%',
+            transition: 'height 0.3s',
+            backgroundColor: '#fff',
+            padding: '10px',
+            position: 'relative',
+            marginBottom: '20px'
+            }}
+        >
+            <button
+            onClick={() => setShowChart(false)}
+            style={{
+                position: 'absolute',
+                top: '5px',
+                right: '5px',
+                zIndex: 1000,
+                backgroundColor: '#007bff',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '3px',
+                padding: '5px 10px',
+                cursor: 'pointer'
+            }}
+            >
+            Contraer gráfico
+            </button>
+            <MergedProductivityChart 
+              aggregatedData={aggregatedActual}
+              aggregatedHistorical={aggregatedHistorical}  // Variable de estado con datos históricos
+              selectedResource={selectedResource}
+              dominantRegion={dominantRegion}
+              quincenas={selectedQuincenas}
+            />
+        </div>
         )}
       </div>
     </div>

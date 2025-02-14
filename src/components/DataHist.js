@@ -1,7 +1,6 @@
-// DryMatterProductivityChart.jsx
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
-import { Line } from 'react-chartjs-2';
+import useCalculatePPNA from './CalcPPNA2';
 
 // Función auxiliar para generar un color aleatorio (puedes personalizar o usar una paleta fija)
 const getRandomColor = () => {
@@ -13,12 +12,16 @@ const getRandomColor = () => {
   return color;
 };
 
-const DryMatterProductivityChart = ({ csvUrl, quincenas }) => {
+// Hook personalizado que procesa el CSV y devuelve el array de datasets
+const useDryMatterProductivity = ({ csvUrl, quincenas, region, recurso}) => {
   const [csvData, setCsvData] = useState([]);
+  const [aggregatedData, setDataHist] = useState([]);
+  const [selectedResource, setDataRecurso] = useState([]);
+  const [dominantRegion, setDataRegion] = useState([]);
 
-  // Cargar y parsear el CSV al montar el componente
+  // Cargar y parsear el CSV al montar el hook
   useEffect(() => {
-    fetch('/ndviRegional_1')
+    fetch(csvUrl)
       .then(response => response.text())
       .then(text => {
         Papa.parse(text, {
@@ -32,40 +35,52 @@ const DryMatterProductivityChart = ({ csvUrl, quincenas }) => {
       .catch(err => console.error("Error al cargar CSV:", err));
   }, [csvUrl]);
 
-  // Procesar los datos: filtrar por quincenas solicitadas y agrupar por año.
-  const chartData = useMemo(() => {
-    if (!csvData.length || !quincenas || quincenas.length === 0) return null;
-
-    // Asegurarse de que las quincenas solicitadas estén en formato numérico
+  // Filtrar los datos y almacenar la información relevante
+  useMemo(() => {
+    if (!csvData.length || !quincenas || quincenas.length === 0 || !region || !recurso)
+      return;
+    // Convertir las quincenas solicitadas a número
     const quincenasSolicitadas = quincenas.map(q => Number(q));
-
-    // Filtrar los datos para conservar solo las filas cuyas quincenas estén en el arreglo solicitado.
+    // Filtrar filas que cumplen con los criterios de quincena, región y recurso
     const filteredData = csvData.filter(row => {
-      // Se asume que la columna "quincena" se puede convertir a número.
       const q = Number(row.quincena);
-      return quincenasSolicitadas.includes(q);
+      return (
+        quincenasSolicitadas.includes(q) &&
+        row.Region === region.name &&
+        row.Recurso === recurso.recurso
+      );
     });
+    setDataHist(filteredData);
+    setDataRecurso(recurso);
+    setDataRegion(region);
+  }, [csvData, quincenas, region, recurso]);
 
-    // Agrupar por año
+  // Calcular PPNA usando el hook personalizado
+  const calculatedPPNAData = useCalculatePPNA({ aggregatedData, selectedResource, dominantRegion});
+
+  // Construir el array de datasets para Chart.js
+  const datasets = useMemo(() => {
+    if (!calculatedPPNAData) return [];
+    // Agrupar los datos calculados por año
     const dataByYear = {};
-    filteredData.forEach(row => {
-      const year = row.year; // Asumimos que la columna "year" existe
+    calculatedPPNAData.forEach(row => {
+      const year = row.anio;
       const quincena = Number(row.quincena);
-      const productividad = Number(row.productividad); // Se convierte a número
+      const productividad = Number(row.PPNA);
       if (!dataByYear[year]) {
         dataByYear[year] = {};
       }
-      // Guardamos la productividad según la quincena (si hay más de un registro para la misma quincena, podrías promediarlo o escoger uno)
       dataByYear[year][quincena] = productividad;
     });
 
-    // Las etiquetas del eje x serán las quincenas solicitadas ordenadas ascendentemente (se puede personalizar, por ejemplo "Q1", "Q2", etc.)
-    const labels = quincenasSolicitadas.sort((a, b) => a - b).map(q => `Quincena ${q}`);
+    const quincenasSolicitadas = quincenas.map(q => Number(q));
+    console.log('Quincenas solicitadas', dataByYear)
 
-    // Crear datasets: cada año tendrá una línea en el gráfico
-    const datasets = Object.entries(dataByYear).map(([year, values]) => {
-      // Para cada quincena solicitada, se busca el valor correspondiente; si no existe se puede asignar null (para que Chart.js deje un espacio)
-      const dataPoints = quincenasSolicitadas.map(q => (q in values ? values[q] : null));
+    // Crear un dataset por cada año
+    return Object.entries(dataByYear).map(([year, values]) => {
+      const dataPoints = quincenasSolicitadas.map(q =>
+        q in values ? values[q] : null
+      );
       return {
         label: year,
         data: dataPoints,
@@ -75,28 +90,10 @@ const DryMatterProductivityChart = ({ csvUrl, quincenas }) => {
         tension: 0.1,
       };
     });
+  }, [recurso, region, aggregatedData, calculatedPPNAData, quincenas]);
 
-    return { labels, datasets };
-  }, [csvData, quincenas]);
-
-  if (!chartData) return <p>Cargando datos...</p>;
-
-  return (
-    <div>
-      <Line data={chartData} options={{
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'top' },
-          title: { display: true, text: 'Productividad de Materia Seca Histórica' }
-        },
-        scales: {
-          x: { title: { display: true, text: 'Quincena' } },
-          y: { title: { display: true, text: 'Productividad (Kg/ha)' }, beginAtZero: true }
-        }
-      }} />
-    </div>
-  );
+  // Devolver el array de datasets para que el componente padre lo almacene en su estado
+  return calculatedPPNAData;
 };
 
-export default DryMatterProductivityChart;
+export default useDryMatterProductivity;

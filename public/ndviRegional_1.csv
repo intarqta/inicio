@@ -1,49 +1,289 @@
-Region,Recurso,anio,quincena,NDVI
-Pampa Mesopotamica,Pastizal,2019,1,0.693841842934709
-Pampa Mesopotamica,Pastizal,2020,1,0.6783417007261655
-Pampa Mesopotamica,Pastizal,2019,2,0.7104003017972501
-Pampa Mesopotamica,Pastizal,2020,2,0.7102849490166195
-Pampa Mesopotamica,Pastizal,2019,3,0.720845384404909
-Pampa Mesopotamica,Pastizal,2020,3,0.6909055333173205
-Pampa Mesopotamica,Pastizal,2019,4,0.6814668273624699
-Pampa Mesopotamica,Pastizal,2020,4,0.6838615118126123
-Pampa Mesopotamica,Pastizal,2019,5,0.6933286848213369
-Pampa Mesopotamica,Pastizal,2020,5,0.5983178280680743
-Pampa Mesopotamica,Pastizal,2019,6,0.6949659481902466
-Pampa Mesopotamica,Pastizal,2020,6,0.6134464912800895
-Pampa Mesopotamica,Pastizal,2019,7,0.640199368996368
-Pampa Mesopotamica,Pastizal,2020,7,0.6233340156671292
-Pampa Mesopotamica,Pastizal,2019,8,0.5834147487329693
-Pampa Mesopotamica,Pastizal,2020,8,0.5391049082960673
-Pampa Mesopotamica,Pastizal,2019,9,0.6089631337674912
-Pampa Mesopotamica,Pastizal,2020,9,0.5406006119905118
-Pampa Mesopotamica,Pastizal,2019,10,0.6204627562256407
-Pampa Mesopotamica,Pastizal,2020,10,0.5457101680316324
-Pampa Mesopotamica,Pastizal,2019,11,0.61778184220662
-Pampa Mesopotamica,Pastizal,2020,11,0.5414469798612634
-Pampa Mesopotamica,Pastizal,2019,12,0.6134235755219708
-Pampa Mesopotamica,Pastizal,2020,12,0.5470037397575228
-Pampa Mesopotamica,Pastizal,2019,13,0.6200589274405411
-Pampa Mesopotamica,Pastizal,2020,13,0.5461137837671948
-Pampa Mesopotamica,Pastizal,2019,14,0.5175418553571174
-Pampa Mesopotamica,Pastizal,2020,14,0.4875743099680346
-Pampa Mesopotamica,Pastizal,2019,15,0.5879978219648107
-Pampa Mesopotamica,Pastizal,2020,15,0.5430128168972099
-Pampa Mesopotamica,Pastizal,2019,16,0.5547657295418036
-Pampa Mesopotamica,Pastizal,2020,16,0.5270992819924952
-Pampa Mesopotamica,Pastizal,2019,17,0.5657885101295256
-Pampa Mesopotamica,Pastizal,2020,17,0.5379028256731921
-Pampa Mesopotamica,Pastizal,2019,18,0.5913042334642679
-Pampa Mesopotamica,Pastizal,2020,18,0.5582681090479003
-Pampa Mesopotamica,Pastizal,2019,19,0.6205941568198194
-Pampa Mesopotamica,Pastizal,2020,19,0.5251245481882275
-Pampa Mesopotamica,Pastizal,2019,20,0.6504768391342343
-Pampa Mesopotamica,Pastizal,2020,20,0.4643038615594027
-Pampa Mesopotamica,Pastizal,2019,21,0.6583714184498078
-Pampa Mesopotamica,Pastizal,2020,21,0.5139906995440621
-Pampa Mesopotamica,Pastizal,2019,22,0.5820078806440646
-Pampa Mesopotamica,Pastizal,2020,22,0.4512205391243967
-Pampa Mesopotamica,Pastizal,2019,23,0.5840767819651208
-Pampa Mesopotamica,Pastizal,2020,23,0.5382046390384462
-Pampa Mesopotamica,Pastizal,2019,24,0.5644111442475892
-Pampa Mesopotamica,Pastizal,2020,24,0.5567727868573207
+Region;Recurso;anio;quincena;meanTemperatura;meanRadiacion;NDVImax;latitud
+Esteros del Ibera;Pastizal;2019;1;26.2;11.1;;-33.587
+Esteros del Ibera;Pastizal;2019;2;26.4;11.2;0.74;-33.587
+Esteros del Ibera;Pastizal;2019;3;24.2;10.9;0.75;-33.587
+Esteros del Ibera;Pastizal;2019;4;24.4;10.3;0.75;-33.587
+Esteros del Ibera;Pastizal;2019;5;23.3;9.6;0.72;-33.587
+Esteros del Ibera;Pastizal;2019;6;21.7;8.2;0.73;-33.587
+Esteros del Ibera;Pastizal;2019;7;22;7.1;0.73;-33.587
+Esteros del Ibera;Pastizal;2019;8;20.5;6.6;0.72;-33.587
+Esteros del Ibera;Pastizal;2019;9;19.3;5;0.73;-33.587
+Esteros del Ibera;Pastizal;2019;10;17.1;4.7;0.73;-33.587
+Esteros del Ibera;Pastizal;2019;11;17.8;4.6;0.72;-33.587
+Esteros del Ibera;Pastizal;2019;12;16.1;4;0.66;-33.587
+Esteros del Ibera;Pastizal;2019;13;11.6;4.3;0.69;-33.587
+Esteros del Ibera;Pastizal;2019;14;14;5.1;0.53;-33.587
+Esteros del Ibera;Pastizal;2019;15;12.6;5.6;0.57;-33.587
+Esteros del Ibera;Pastizal;2019;16;16;6.6;0.53;-33.587
+Esteros del Ibera;Pastizal;2019;17;16.3;6.5;0.46;-33.587
+Esteros del Ibera;Pastizal;2019;18;18.5;8;0.56;-33.587
+Esteros del Ibera;Pastizal;2019;19;21.6;8.1;0.55;-33.587
+Esteros del Ibera;Pastizal;2019;20;21.5;9.4;0.60;-33.587
+Esteros del Ibera;Pastizal;2019;21;24.6;10.6;0.64;-33.587
+Esteros del Ibera;Pastizal;2019;22;25.6;11.1;0.65;-33.587
+Esteros del Ibera;Pastizal;2019;23;25.1;11.4;0.69;-33.587
+Esteros del Ibera;Pastizal;2019;24;27.2;11.6;0.68;-33.587
+Malezales;Pastizal;2019;1;25.9;11;0.67;-33.587
+Malezales;Pastizal;2019;2;26.2;11.1;0.68;-33.587
+Malezales;Pastizal;2019;3;24;10.9;0.70;-33.587
+Malezales;Pastizal;2019;4;24.4;10.4;0.67;-33.587
+Malezales;Pastizal;2019;5;23.4;9.6;0.64;-33.587
+Malezales;Pastizal;2019;6;22.1;8.2;0.66;-33.587
+Malezales;Pastizal;2019;7;22.6;7.1;0.67;-33.587
+Malezales;Pastizal;2019;8;20.6;6.7;0.64;-33.587
+Malezales;Pastizal;2019;9;19.1;5;0.66;-33.587
+Malezales;Pastizal;2019;10;16.9;4.7;0.66;-33.587
+Malezales;Pastizal;2019;11;17.5;4.6;0.62;-33.587
+Malezales;Pastizal;2019;12;16.4;4.1;0.58;-33.587
+Malezales;Pastizal;2019;13;11.3;4.4;0.63;-33.587
+Malezales;Pastizal;2019;14;14;5.1;0.51;-33.587
+Malezales;Pastizal;2019;15;12.5;5.5;0.54;-33.587
+Malezales;Pastizal;2019;16;15.7;6.6;0.49;-33.587
+Malezales;Pastizal;2019;17;16.2;6.4;0.50;-33.587
+Malezales;Pastizal;2019;18;18.9;8;0.50;-33.587
+Malezales;Pastizal;2019;19;22.2;8;0.52;-33.587
+Malezales;Pastizal;2019;20;21.2;9.3;0.57;-33.587
+Malezales;Pastizal;2019;21;24.3;10.5;0.58;-33.587
+Malezales;Pastizal;2019;22;25.6;10.9;0.61;-33.587
+Malezales;Pastizal;2019;23;25.4;11.6;0.65;-33.587
+Malezales;Pastizal;2019;24;27.4;11.7;0.63;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;1;24.9;11;0.72;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;2;25.3;11.4;0.71;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;3;22.8;11;0.74;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;4;23.7;10.3;0.71;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;5;21.9;9.5;0.67;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;6;20.3;8;0.69;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;7;20.6;7;0.67;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;8;18.2;6.2;0.63;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;9;17.4;5.1;0.64;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;10;15.2;4.5;0.68;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;11;16.3;4.4;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;12;13.3;3.9;0.63;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;13;10;4.1;0.65;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;14;12.7;4.7;0.51;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;15;10.6;5.5;0.56;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;16;14.3;6.5;0.53;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;17;13.4;6.6;0.55;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;18;16.9;8;0.56;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;19;19.2;8.8;0.57;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;20;19.7;9.8;0.63;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;21;22.7;10.8;0.67;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;22;23.7;11.9;0.63;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;23;23.5;11.4;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2019;24;25.9;11.9;0.65;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;1;26;11.2;0.66;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;2;26.1;11.3;0.53;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;3;23.8;11;0.66;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;4;24.3;10.5;0.69;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;5;23;9.6;0.67;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;6;21.7;8.2;0.73;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;7;22.2;7.1;0.72;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;8;20.2;6.5;0.70;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;9;19.3;5;0.72;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;10;16.9;4.7;0.73;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;11;17.7;4.6;0.74;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;12;15.5;4;0.76;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;13;11.7;4.3;0.73;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;14;13.8;5.1;0.66;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;15;12.4;5.7;0.65;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;16;16;6.7;0.55;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;17;16.2;6.7;0.62;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;18;19;8.1;0.60;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;19;22;8.2;0.61;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;20;21.7;9.6;0.66;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;21;24.9;10.7;0.73;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;22;25.9;11.4;0.71;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;23;25.5;11.2;0.70;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2019;24;27.4;11.7;0.75;-33.587
+Pampa Mesopotamica;Pastizal;2019;1;23.5;11.7;0.69;-33.587
+Pampa Mesopotamica;Pastizal;2019;2;24.6;11.7;0.71;-33.587
+Pampa Mesopotamica;Pastizal;2019;3;21.7;11.2;0.72;-33.587
+Pampa Mesopotamica;Pastizal;2019;4;23.2;10.5;0.68;-33.587
+Pampa Mesopotamica;Pastizal;2019;5;21.2;9.4;0.69;-33.587
+Pampa Mesopotamica;Pastizal;2019;6;19.1;8;0.69;-33.587
+Pampa Mesopotamica;Pastizal;2019;7;19.2;6.8;0.64;-33.587
+Pampa Mesopotamica;Pastizal;2019;8;17.1;5.8;0.58;-33.587
+Pampa Mesopotamica;Pastizal;2019;9;15.7;5.1;0.61;-33.587
+Pampa Mesopotamica;Pastizal;2019;10;13.6;4.2;0.62;-33.587
+Pampa Mesopotamica;Pastizal;2019;11;15.2;4.2;0.62;-33.587
+Pampa Mesopotamica;Pastizal;2019;12;11.8;3.7;0.61;-33.587
+Pampa Mesopotamica;Pastizal;2019;13;8.6;3.8;0.62;-33.587
+Pampa Mesopotamica;Pastizal;2019;14;11.6;4.4;0.52;-33.587
+Pampa Mesopotamica;Pastizal;2019;15;9.3;5.3;0.59;-33.587
+Pampa Mesopotamica;Pastizal;2019;16;13.2;6.4;0.55;-33.587
+Pampa Mesopotamica;Pastizal;2019;17;11.5;6.7;0.57;-33.587
+Pampa Mesopotamica;Pastizal;2019;18;16.1;8;0.59;-33.587
+Pampa Mesopotamica;Pastizal;2019;19;17;9;0.62;-33.587
+Pampa Mesopotamica;Pastizal;2019;20;18.5;9.4;0.65;-33.587
+Pampa Mesopotamica;Pastizal;2019;21;22.1;10.8;0.66;-33.587
+Pampa Mesopotamica;Pastizal;2019;22;23;11.8;0.58;-33.587
+Pampa Mesopotamica;Pastizal;2019;23;22.7;11.9;0.58;-33.587
+Pampa Mesopotamica;Pastizal;2019;24;24.2;12.1;0.56;-33.587
+Pampa Mesopotamica;Pastura;2019;1;23.5;11.7;0.71;-33.587
+Pampa Mesopotamica;Pastura;2019;2;24.6;11.7;0.73;-33.587
+Pampa Mesopotamica;Pastura;2019;3;21.7;11.2;0.73;-33.587
+Pampa Mesopotamica;Pastura;2019;4;23.2;10.5;0.69;-33.587
+Pampa Mesopotamica;Pastura;2019;5;21.2;9.4;0.71;-33.587
+Pampa Mesopotamica;Pastura;2019;6;19.1;8;0.71;-33.587
+Pampa Mesopotamica;Pastura;2019;7;19.2;6.8;0.65;-33.587
+Pampa Mesopotamica;Pastura;2019;8;17.1;5.8;0.60;-33.587
+Pampa Mesopotamica;Pastura;2019;9;15.7;5.1;0.64;-33.587
+Pampa Mesopotamica;Pastura;2019;10;13.6;4.2;0.64;-33.587
+Pampa Mesopotamica;Pastura;2019;11;15.2;4.2;0.65;-33.587
+Pampa Mesopotamica;Pastura;2019;12;11.8;3.7;0.66;-33.587
+Pampa Mesopotamica;Pastura;2019;13;8.6;3.8;0.67;-33.587
+Pampa Mesopotamica;Pastura;2019;14;11.6;4.4;0.57;-33.587
+Pampa Mesopotamica;Pastura;2019;15;9.3;5.3;0.64;-33.587
+Pampa Mesopotamica;Pastura;2019;16;13.2;6.4;0.62;-33.587
+Pampa Mesopotamica;Pastura;2019;17;11.5;6.7;0.63;-33.587
+Pampa Mesopotamica;Pastura;2019;18;16.1;8;0.65;-33.587
+Pampa Mesopotamica;Pastura;2019;19;17;9;0.66;-33.587
+Pampa Mesopotamica;Pastura;2019;20;18.5;9.4;0.69;-33.587
+Pampa Mesopotamica;Pastura;2019;21;22.1;10.8;0.69;-33.587
+Pampa Mesopotamica;Pastura;2019;22;23;11.8;0.59;-33.587
+Pampa Mesopotamica;Pastura;2019;23;22.7;11.9;0.58;-33.587
+Pampa Mesopotamica;Pastura;2019;24;24.2;12.1;0.59;-33.587
+Esteros del Ibera;Pastizal;2020;1;29;11.1;0.66;-33.587
+Esteros del Ibera;Pastizal;2020;2;26.4;11.2;0.73;-33.587
+Esteros del Ibera;Pastizal;2020;3;28.9;10.9;0.73;-33.587
+Esteros del Ibera;Pastizal;2020;4;23.3;10.3;0.74;-33.587
+Esteros del Ibera;Pastizal;2020;5;28;9.6;0.72;-33.587
+Esteros del Ibera;Pastizal;2020;6;25.8;8.2;0.70;-33.587
+Esteros del Ibera;Pastizal;2020;7;19.2;7.1;0.73;-33.587
+Esteros del Ibera;Pastizal;2020;8;22.3;6.6;0.70;-33.587
+Esteros del Ibera;Pastizal;2020;9;17.2;5;0.69;-33.587
+Esteros del Ibera;Pastizal;2020;10;15.8;4.7;0.67;-33.587
+Esteros del Ibera;Pastizal;2020;11;13.8;4.6;0.66;-33.587
+Esteros del Ibera;Pastizal;2020;12;17.5;4;0.67;-33.587
+Esteros del Ibera;Pastizal;2020;13;10.8;4.3;0.61;-33.587
+Esteros del Ibera;Pastizal;2020;14;14.9;5.1;0.55;-33.587
+Esteros del Ibera;Pastizal;2020;15;17.7;5.6;0.58;-33.587
+Esteros del Ibera;Pastizal;2020;16;15.8;6.6;0.59;-33.587
+Esteros del Ibera;Pastizal;2020;17;17.1;6.5;0.51;-33.587
+Esteros del Ibera;Pastizal;2020;18;19.7;8;0.56;-33.587
+Esteros del Ibera;Pastizal;2020;19;20.9;8.1;0.57;-33.587
+Esteros del Ibera;Pastizal;2020;20;24.2;9.4;0.60;-33.587
+Esteros del Ibera;Pastizal;2020;21;23.7;10.6;0.59;-33.587
+Esteros del Ibera;Pastizal;2020;22;25.8;11.1;0.56;-33.587
+Esteros del Ibera;Pastizal;2020;23;25.8;11.4;0.64;-33.587
+Esteros del Ibera;Pastizal;2020;24;27.3;11.6;0.66;-33.587
+Malezales;Pastizal;2020;1;1;11;0.62;-33.587
+Malezales;Pastizal;2020;2;2;11.1;0.65;-33.587
+Malezales;Pastizal;2020;3;3;10.9;0.63;-33.587
+Malezales;Pastizal;2020;4;4;10.4;0.61;-33.587
+Malezales;Pastizal;2020;5;5;9.6;0.65;-33.587
+Malezales;Pastizal;2020;6;6;8.2;0.64;-33.587
+Malezales;Pastizal;2020;7;7;7.1;0.69;-33.587
+Malezales;Pastizal;2020;8;8;6.7;0.64;-33.587
+Malezales;Pastizal;2020;9;9;5;0.64;-33.587
+Malezales;Pastizal;2020;10;10;4.7;0.62;-33.587
+Malezales;Pastizal;2020;11;11;4.6;0.62;-33.587
+Malezales;Pastizal;2020;12;12;4.1;0.63;-33.587
+Malezales;Pastizal;2020;13;13;4.4;0.56;-33.587
+Malezales;Pastizal;2020;14;14;5.1;0.53;-33.587
+Malezales;Pastizal;2020;15;15;5.5;0.53;-33.587
+Malezales;Pastizal;2020;16;16;6.6;0.55;-33.587
+Malezales;Pastizal;2020;17;17;6.4;0.50;-33.587
+Malezales;Pastizal;2020;18;18;8;0.54;-33.587
+Malezales;Pastizal;2020;19;19;8;0.54;-33.587
+Malezales;Pastizal;2020;20;20;9.3;0.59;-33.587
+Malezales;Pastizal;2020;21;21;10.5;0.58;-33.587
+Malezales;Pastizal;2020;22;22;10.9;0.53;-33.587
+Malezales;Pastizal;2020;23;23;11.6;0.65;-33.587
+Malezales;Pastizal;2020;24;24;11.7;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;1;26.7;11;0.64;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;2;25.2;11.4;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;3;27.4;11;0.67;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;4;22.8;10.3;0.68;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;5;26.9;9.5;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;6;24.1;8;0.66;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;7;17.9;7;0.68;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;8;20.3;6.2;0.62;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;9;14.5;5.1;0.61;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;10;14;4.5;0.60;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;11;11.8;4.4;0.59;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;12;14.3;3.9;0.61;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;13;8.5;4.1;0.56;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;14;12.4;4.7;0.53;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;15;16.1;5.5;0.49;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;16;13.6;6.5;0.52;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;17;13.6;6.6;0.50;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;18;17.4;8;0.53;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;19;17.6;8.8;0.54;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;20;22.3;9.8;0.53;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;21;22.5;10.8;0.55;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;22;24.6;11.9;0.52;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;23;23.3;11.4;0.65;-33.587
+Nandubayzal y Selva de Montiel;Pastizal;2020;24;25.2;11.9;0.66;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;1;29.1;11.2;0.70;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;2;26.1;11.3;0.72;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;3;28.2;11;0.73;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;4;23.4;10.5;0.74;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;5;28.2;9.6;0.72;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;6;25.9;8.2;0.67;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;7;19.3;7.1;0.71;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;8;22.5;6.5;0.70;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;9;17.4;5;0.71;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;10;16.1;4.7;0.71;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;11;14;4.6;0.67;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;12;17.8;4;0.69;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;13;11.1;4.3;0.61;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;14;15.4;5.1;0.64;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;15;18.8;5.7;0.46;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;16;16.5;6.7;0.44;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;17;17.5;6.7;0.50;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;18;21;8.1;0.53;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;19;21.7;8.2;0.51;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;20;25.4;9.6;0.52;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;21;24.4;10.7;0.55;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;22;26.4;11.4;0.56;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;23;25.6;11.2;0.65;-33.587
+Pajonales y Palmares de Yatay;Pastizal;2020;24;26.9;11.7;0.69;-33.587
+Pampa Mesopotamica;Pastizal;2020;1;24.6;11.7;0.68;-33.587
+Pampa Mesopotamica;Pastizal;2020;2;24;11.7;0.71;-33.587
+Pampa Mesopotamica;Pastizal;2020;3;26.1;11.2;0.69;-33.587
+Pampa Mesopotamica;Pastizal;2020;4;22.8;10.5;0.68;-33.587
+Pampa Mesopotamica;Pastizal;2020;5;26.7;9.4;0.60;-33.587
+Pampa Mesopotamica;Pastizal;2020;6;23.5;8;0.61;-33.587
+Pampa Mesopotamica;Pastizal;2020;7;17;6.8;0.62;-33.587
+Pampa Mesopotamica;Pastizal;2020;8;19.1;5.8;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;9;13.8;5.1;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;10;13.8;4.2;0.55;-33.587
+Pampa Mesopotamica;Pastizal;2020;11;11.2;4.2;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;12;12.3;3.7;0.55;-33.587
+Pampa Mesopotamica;Pastizal;2020;13;7.7;3.8;0.55;-33.587
+Pampa Mesopotamica;Pastizal;2020;14;10.9;4.4;0.49;-33.587
+Pampa Mesopotamica;Pastizal;2020;15;15;5.3;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;16;12.6;6.4;0.53;-33.587
+Pampa Mesopotamica;Pastizal;2020;17;12.3;6.7;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;18;16.4;8;0.56;-33.587
+Pampa Mesopotamica;Pastizal;2020;19;16.4;9;0.53;-33.587
+Pampa Mesopotamica;Pastizal;2020;20;19.9;9.4;0.46;-33.587
+Pampa Mesopotamica;Pastizal;2020;21;21.9;10.8;0.51;-33.587
+Pampa Mesopotamica;Pastizal;2020;22;24.5;11.8;0.45;-33.587
+Pampa Mesopotamica;Pastizal;2020;23;22.6;11.9;0.54;-33.587
+Pampa Mesopotamica;Pastizal;2020;24;25.4;12.1;0.56;-33.587
+Pampa Mesopotamica;Pastura;2020;1;24.6;11.7;0.70;-33.587
+Pampa Mesopotamica;Pastura;2020;2;24;11.7;0.74;-33.587
+Pampa Mesopotamica;Pastura;2020;3;26.1;11.2;0.71;-33.587
+Pampa Mesopotamica;Pastura;2020;4;22.8;10.5;0.69;-33.587
+Pampa Mesopotamica;Pastura;2020;5;26.7;9.4;0.61;-33.587
+Pampa Mesopotamica;Pastura;2020;6;23.5;8;0.61;-33.587
+Pampa Mesopotamica;Pastura;2020;7;17;6.8;0.62;-33.587
+Pampa Mesopotamica;Pastura;2020;8;19.1;5.8;0.53;-33.587
+Pampa Mesopotamica;Pastura;2020;9;13.8;5.1;0.54;-33.587
+Pampa Mesopotamica;Pastura;2020;10;13.8;4.2;0.56;-33.587
+Pampa Mesopotamica;Pastura;2020;11;11.2;4.2;0.55;-33.587
+Pampa Mesopotamica;Pastura;2020;12;12.3;3.7;0.58;-33.587
+Pampa Mesopotamica;Pastura;2020;13;7.7;3.8;0.59;-33.587
+Pampa Mesopotamica;Pastura;2020;14;10.9;4.4;0.55;-33.587
+Pampa Mesopotamica;Pastura;2020;15;15;5.3;0.60;-33.587
+Pampa Mesopotamica;Pastura;2020;16;12.6;6.4;0.57;-33.587
+Pampa Mesopotamica;Pastura;2020;17;12.3;6.7;0.59;-33.587
+Pampa Mesopotamica;Pastura;2020;18;16.4;8;0.61;-33.587
+Pampa Mesopotamica;Pastura;2020;19;16.4;9;0.55;-33.587
+Pampa Mesopotamica;Pastura;2020;20;19.9;9.4;0.47;-33.587
+Pampa Mesopotamica;Pastura;2020;21;21.9;10.8;0.53;-33.587
+Pampa Mesopotamica;Pastura;2020;22;24.5;11.8;0.45;-33.587
+Pampa Mesopotamica;Pastura;2020;23;22.6;11.9;0.55;-33.587
+Pampa Mesopotamica;Pastura;2020;24;25.4;12.1;0.58;-33.587
