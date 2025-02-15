@@ -13,5 +13,4 @@ A continuación, se utiliza el polígono para conocer en que región fitgeografi
 #### nasaPower.py
 Este componente estrae las coordenadas del centroide del polígono, junto al rango de fecha definido por el usuario. Posteriormente, hace una petición get a Nasa Power para el rango de temperatura. Seguidamente, el código solicita los datos de radiación de los ultimos 10 años y genera el percentil 95 de cada dia juliano. Finalmente, se devuelve un json con los datos diarios de temperatura y radiación para el rando de fecha solicitado por el usuario.
 #### Ajustes del servidor y despliegue 
-El servidor recibe los datos en https://server-fontagro.render.app/api/ndvi
-
+El servidor recibe los datos en https://apigee-4ud9.onrender.com/api/ndvi/
